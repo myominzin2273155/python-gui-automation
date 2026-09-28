@@ -11,7 +11,7 @@ async def main():
         print("Quotes (Multi-page) Website သို့ သွားနေပါသည်...")
         await page.goto("https://quotes.toscrape.com/", wait_until="domcontentloaded")
 
-        with open("quotes_all_pages.csv", mode="w", newline="", encoding="utf-8") as file:
+        with open("quotes_all_pages.csv", mode="w", newline="", encoding="utf-8-sig") as file:
             writer = csv.writer(file)
             writer.writerow(["Quote", "Author", "Tags"])
 
